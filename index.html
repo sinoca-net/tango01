@@ -672,11 +672,10 @@ src="https://www.facebook.com/tr?id=1715929799835629&ev=PageView&noscript=1"
     "#hero-wa-btn, #main-wa-btn, #float-wa-btn, #nav-wa"
   ).forEach(el => {
     el.href = waURL;
-    el.addEventListener('click', function() {
-      // 🎯 Evento Contact → se dispara cuando alguien hace clic en WhatsApp
-      fbq('track', 'Contact');
-      console.log('✅ Meta Pixel: Contact event fired');
-    });
+   el.addEventListener('click', function() {
+  fbq('trackCustom', 'ClickWhatsApp');
+  console.log('✅ Meta Pixel: ClickWhatsApp event fired');
+});
   });
 
   // 🎯 Evento ViewContent → se dispara cuando carga la landing
