@@ -761,14 +761,10 @@ src="https://www.facebook.com/tr?id=1525657955581825&ev=PageView&noscript=1"
   // ─── ASIGNA URL + DISPARA TODOS LOS EVENTOS PIXEL en cada botón ───
   document.querySelectorAll(".wa-btn").forEach(el => {
     el.href = waURL;
-    el.addEventListener('click', function() {
-      fbq('track', 'Contact');
-      fbq('track', 'Lead');
-      fbq('track', 'InitiateCheckout');
-      fbq('trackCustom', 'clickwhatsapp');
-      fbq('trackCustom', 'BonoClic100');
-      console.log('✅ Pixel: Contact + Lead + InitiateCheckout + clickwhatsapp + BonoClic100 | Botón:', el.className);
-    });
+  el.addEventListener('click', function() {
+  fbq('trackCustom', 'clickwhatsapp');  // ← ÚNICO evento
+  console.log('✅ Pixel: clickwhatsapp disparado');
+});
   });
 
   // 🎯 ViewContent al cargar la landing
