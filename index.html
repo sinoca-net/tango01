@@ -748,33 +748,22 @@ src="https://www.facebook.com/tr?id=1525657955581825&ev=PageView&noscript=1"
 </a>
 
 <!-- ─── SCRIPT: WhatsApp + Pixel Tracking ─────────────────────── -->
+<!-- ─── SCRIPT: WhatsApp + Pixel Tracking ─────────────────────── -->
 <script>
-  // ╔══════════════════════════════════════════════════╗
-  // ║  CONFIGURACIÓN — editá solo estos valores        ║
-  // ╚══════════════════════════════════════════════════╝
   const WA_NUMBER  = "5492236749395";
   const WA_MESSAGE = "Hola! Vi que hay un bono del 100% en la primera carga en Tango 01. Quiero activarlo 🎁";
 
-  // Construye la URL de WhatsApp
   const waURL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`;
 
-  // ─── ASIGNA URL + DISPARA TODOS LOS EVENTOS PIXEL en cada botón ───
   document.querySelectorAll(".wa-btn").forEach(el => {
     el.href = waURL;
-  el.addEventListener('click', function() {
-  fbq('trackCustom', 'clickwhatsapp');  // ← ÚNICO evento
-  console.log('✅ Pixel: clickwhatsapp disparado');
-});
+    el.addEventListener('click', function() {
+      fbq('trackCustom', 'clickwhatsapp');
+      console.log('✅ Pixel: clickwhatsapp disparado');
+    });
   });
 
-  // 🎯 ViewContent al cargar la landing
-  fbq('track', 'ViewContent', {
-    content_name: 'Bono 100% Primera Carga - Tango 01',
-    content_category: 'Promotion',
-    content_type: 'product',
-    value: 0,
-    currency: 'ARS'
-  });
+  // ❌ ELIMINADO: fbq('track', 'ViewContent', {...}) → generaba "Ver contenido"
 </script>
 
 </body>
