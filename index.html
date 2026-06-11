@@ -1,541 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- ═══ META PIXEL ═══════════════════════════════════════════ -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1525657955581825');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1525657955581825&ev=PageView&noscript=1"
-/></noscript>
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1525657955581825');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1525657955581825&ev=PageView&noscript=1"/></noscript>
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tango 01 – Bono 100% Primera Carga</title>
-  <meta name="description" content="Activá tu bono del 100% en Tango 01. Plataforma premium con pagos ilimitados y atención 24hs." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="Activá tu bono del 100% en Tango 01. Plataforma premium con pagos ilimitados y atención 24hs."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
   <style>
-    :root {
-      --gold:       #C9A84C;
-      --gold-light: #E8C96A;
-      --gold-dim:   #8A6B28;
-      --black:      #080808;
-      --dark:       #0E0E0E;
-      --dark2:      #161616;
-      --dark3:      #1E1E1E;
-      --white:      #F5F0E8;
-      --white-dim:  rgba(245,240,232,0.55);
-      --radius:     14px;
-      --wa:         #25D366;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--black);
-      color: var(--white);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.025;
-    }
-
-    section, header, footer { position: relative; z-index: 1; }
-
-    .gold-line {
-      display: block; width: 60px; height: 2px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      margin-bottom: 18px;
-    }
-
-    /* ─── BONO TOP BANNER ───────────────────────────────────────── */
-    .bono-banner {
-      background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-dim));
-      padding: 10px 24px;
-      text-align: center;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--black);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 200;
-      animation: pulseBar 2.5s ease-in-out infinite;
-    }
-    @keyframes pulseBar {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.85; }
-    }
-
-    /* ─── NAV ───────────────────────────────────────────────────── */
-    nav {
-      position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 24px;
-      background: linear-gradient(180deg, rgba(8,8,8,0.98) 0%, transparent 100%);
-      backdrop-filter: blur(6px);
-    }
-
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem; font-weight: 900;
-      color: var(--gold-light);
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      display: flex; align-items: center; gap: 10px;
-    }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--black);
-      font-weight: 700; font-size: 0.8rem;
-      padding: 9px 18px; border-radius: 50px;
-      text-decoration: none; letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
-
-    /* ─── HERO ──────────────────────────────────────────────────── */
-    .hero {
-      min-height: 100svh;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center;
-      padding: 150px 24px 80px;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.13) 0%, transparent 65%),
-        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(201,168,76,0.07) 0%, transparent 60%),
-        var(--black);
-      overflow: hidden;
-    }
-
-    .bono-hero-badge {
-      display: inline-flex; align-items: center; gap: 16px;
-      background: linear-gradient(135deg, rgba(201,168,76,0.18), rgba(201,168,76,0.06));
-      border: 1.5px solid rgba(201,168,76,0.5);
-      border-radius: 16px;
-      padding: 16px 28px;
-      margin-bottom: 32px;
-      animation: fadeUp 0.6s ease both;
-      box-shadow: 0 0 40px rgba(201,168,76,0.12);
-    }
-    .bono-hero-badge .bono-percent {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem; font-weight: 900;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-    }
-    .bono-hero-badge .bono-text {
-      display: flex; flex-direction: column; align-items: flex-start; gap: 3px;
-    }
-    .bono-hero-badge .bono-text .label {
-      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em;
-      color: var(--white-dim);
-    }
-    .bono-hero-badge .bono-text .value {
-      font-size: 1rem; font-weight: 700; color: var(--gold-light);
-    }
-
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      border: 1px solid rgba(201,168,76,0.35);
-      border-radius: 50px; padding: 6px 16px;
-      font-size: 0.72rem; font-weight: 500;
-      color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase;
-      margin-bottom: 28px;
-      animation: fadeUp 0.7s 0.1s ease both;
-    }
-    .hero-badge::before {
-      content: ''; width: 6px; height: 6px; border-radius: 50%;
-      background: var(--gold);
-      animation: pulse 1.8s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.4; transform: scale(0.7); }
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 9vw, 5.2rem);
-      font-weight: 900; line-height: 1.05;
-      letter-spacing: -0.01em;
-      margin-bottom: 22px;
-      animation: fadeUp 0.7s 0.15s ease both;
-    }
-    .hero h1 .highlight {
-      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dim) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-sub {
-      font-size: clamp(1rem, 3.5vw, 1.2rem);
-      font-weight: 300; color: var(--white-dim);
-      max-width: 480px; line-height: 1.65;
-      margin-bottom: 40px;
-      animation: fadeUp 0.7s 0.2s ease both;
-    }
-
-    .hero-cta-group {
-      display: flex; flex-direction: column; align-items: center; gap: 14px;
-      animation: fadeUp 0.7s 0.3s ease both;
-    }
-
-    .btn-primary {
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      color: var(--black); font-weight: 700;
-      font-size: 1rem; letter-spacing: 0.03em;
-      padding: 18px 36px; border-radius: 50px;
-      text-decoration: none; border: none; cursor: pointer;
-      box-shadow: 0 0 40px rgba(201,168,76,0.3), 0 4px 16px rgba(0,0,0,0.5);
-      transition: transform 0.2s, box-shadow 0.2s;
-      width: 100%; max-width: 380px;
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 60px rgba(201,168,76,0.45), 0 8px 24px rgba(0,0,0,0.5);
-    }
-    .btn-primary svg { width: 22px; height: 22px; flex-shrink: 0; }
-
-    .urgency-pill {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(201,168,76,0.08);
-      border: 1px solid rgba(201,168,76,0.2);
-      border-radius: 50px;
-      padding: 8px 18px;
-      font-size: 0.75rem; color: var(--gold);
-      letter-spacing: 0.05em;
-    }
-
-    .hero-trust {
-      font-size: 0.78rem; color: var(--white-dim);
-      letter-spacing: 0.04em;
-    }
-
-    .orb {
-      position: absolute; border-radius: 50%; pointer-events: none;
-      filter: blur(80px); opacity: 0.18;
-    }
-    .orb-1 {
-      width: 340px; height: 340px; background: var(--gold);
-      top: -80px; left: -100px;
-      animation: drift 14s ease-in-out infinite alternate;
-    }
-    .orb-2 {
-      width: 250px; height: 250px; background: var(--gold-dim);
-      bottom: 0; right: -60px;
-      animation: drift 18s ease-in-out infinite alternate-reverse;
-    }
-    @keyframes drift {
-      from { transform: translate(0, 0) scale(1); }
-      to   { transform: translate(20px, 30px) scale(1.1); }
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ─── PROOF BAR ─────────────────────────────────────────────── */
-    .proof-bar {
-      background: var(--dark2);
-      border-top: 1px solid rgba(201,168,76,0.1);
-      border-bottom: 1px solid rgba(201,168,76,0.1);
-      padding: 20px 24px; text-align: center;
-    }
-    .proof-bar p {
-      font-size: 0.72rem; color: var(--gold);
-      text-transform: uppercase; letter-spacing: 0.15em;
-      font-weight: 600; margin-bottom: 16px;
-    }
-    .proof-items {
-      display: flex; justify-content: center; align-items: center;
-      flex-wrap: wrap; gap: 24px 36px;
-    }
-    .proof-item {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 0.82rem; color: var(--white-dim); font-weight: 500;
-    }
-    .proof-item svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
-
-    /* ─── BONO SECTION ──────────────────────────────────────────── */
-    .bono-section {
-      padding: 70px 24px;
-      background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02));
-      border-top: 1px solid rgba(201,168,76,0.15);
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-      text-align: center;
-    }
-    .bono-card {
-      max-width: 580px; margin: 0 auto;
-      background: rgba(201,168,76,0.06);
-      border: 1.5px solid rgba(201,168,76,0.3);
-      border-radius: 20px; padding: 48px 36px;
-      position: relative; overflow: hidden;
-    }
-    .bono-card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-    .bono-card .big-percent {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(5rem, 18vw, 8rem);
-      font-weight: 900; line-height: 1;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 8px;
-    }
-    .bono-card .bono-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem; font-weight: 700;
-      margin-bottom: 14px; color: var(--white);
-    }
-    .bono-card .bono-desc {
-      font-size: 0.92rem; color: var(--white-dim); line-height: 1.75;
-      margin-bottom: 30px;
-    }
-    .bono-card .bono-example {
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.25);
-      border-radius: 12px; padding: 16px 24px;
-      font-size: 0.9rem; color: var(--gold-light);
-      font-weight: 600; margin-bottom: 30px;
-    }
-    .bono-card .bono-cta {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      color: var(--black); font-weight: 700;
-      font-size: 1rem; padding: 17px 34px; border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 0 40px rgba(201,168,76,0.35);
-      transition: transform 0.2s, box-shadow 0.2s;
-      width: 100%; max-width: 360px; justify-content: center;
-    }
-    .bono-card .bono-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 60px rgba(201,168,76,0.5);
-    }
-    .bono-card .bono-note {
-      margin-top: 14px; font-size: 0.72rem; color: var(--white-dim);
-    }
-
-    /* ─── BENEFITS ──────────────────────────────────────────────── */
-    .benefits { padding: 80px 24px; background: var(--dark); }
-    .section-label {
-      font-size: 0.72rem; color: var(--gold);
-      text-transform: uppercase; letter-spacing: 0.18em;
-      font-weight: 600; margin-bottom: 10px;
-    }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 6vw, 2.8rem);
-      font-weight: 900; line-height: 1.1; margin-bottom: 14px;
-    }
-    .section-sub {
-      font-size: 0.95rem; color: var(--white-dim);
-      line-height: 1.7; max-width: 420px; margin-bottom: 48px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      background: var(--dark3);
-      border: 1px solid rgba(201,168,76,0.1);
-      border-radius: var(--radius); padding: 28px 24px;
-      transition: border-color 0.25s, transform 0.25s;
-      position: relative; overflow: hidden;
-    }
-    .card::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      opacity: 0; transition: opacity 0.3s;
-    }
-    .card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-3px); }
-    .card:hover::before { opacity: 1; }
-    .card-icon {
-      width: 46px; height: 46px; border-radius: 12px;
-      background: rgba(201,168,76,0.1);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 18px;
-    }
-    .card-icon svg { width: 22px; height: 22px; color: var(--gold); }
-    .card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem; font-weight: 700; margin-bottom: 8px;
-    }
-    .card p { font-size: 0.87rem; color: var(--white-dim); line-height: 1.65; }
-
-    /* ─── HOW IT WORKS ──────────────────────────────────────────── */
-    .how { padding: 80px 24px; background: var(--black); }
-    .steps { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }
-    .step {
-      display: flex; gap: 20px; align-items: flex-start;
-      padding-bottom: 36px; position: relative;
-    }
-    .step:not(:last-child)::before {
-      content: '';
-      position: absolute; left: 19px; top: 46px; width: 2px; bottom: 0;
-      background: linear-gradient(180deg, rgba(201,168,76,0.4), transparent);
-    }
-    .step-num {
-      width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      color: var(--black); font-weight: 800; font-size: 0.85rem;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 20px rgba(201,168,76,0.25);
-    }
-    .step-body h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem; font-weight: 700;
-      margin-bottom: 6px; margin-top: 8px;
-    }
-    .step-body p { font-size: 0.87rem; color: var(--white-dim); line-height: 1.65; }
-
-    /* ─── STATS ─────────────────────────────────────────────────── */
-    .stats {
-      background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04));
-      border-top: 1px solid rgba(201,168,76,0.15);
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-      padding: 48px 24px;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 32px; text-align: center;
-    }
-    .stat-value {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 7vw, 3rem);
-      font-weight: 900; color: var(--gold-light); line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.78rem; color: var(--white-dim);
-      text-transform: uppercase; letter-spacing: 0.1em; margin-top: 6px;
-    }
-
-    /* ─── FINAL CTA ─────────────────────────────────────────────── */
-    .cta-section {
-      padding: 90px 24px;
-      background:
-        radial-gradient(ellipse 70% 50% at 50% 100%, rgba(201,168,76,0.12) 0%, transparent 70%),
-        var(--dark);
-      text-align: center;
-    }
-    .cta-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 7vw, 3.2rem);
-      font-weight: 900; line-height: 1.1; margin-bottom: 18px;
-    }
-    .cta-section p {
-      font-size: 0.95rem; color: var(--white-dim);
-      line-height: 1.7; max-width: 380px;
-      margin: 0 auto 36px;
-    }
-    .btn-wa {
-      display: inline-flex; align-items: center; justify-content: center; gap: 12px;
-      background: var(--wa); color: #fff; font-weight: 700;
-      font-size: 1rem; letter-spacing: 0.02em;
-      padding: 18px 36px; border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 0 40px rgba(37,211,102,0.3), 0 4px 20px rgba(0,0,0,0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-      width: 100%; max-width: 380px;
-    }
-    .btn-wa:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 60px rgba(37,211,102,0.45), 0 8px 24px rgba(0,0,0,0.4);
-    }
-    .btn-wa svg { width: 24px; height: 24px; flex-shrink: 0; }
-    .cta-note { margin-top: 18px; font-size: 0.75rem; color: var(--white-dim); }
-
-    /* ─── FOOTER ────────────────────────────────────────────────── */
-    footer {
-      background: var(--black);
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding: 28px 24px; text-align: center;
-    }
-    footer p { font-size: 0.72rem; color: rgba(245,240,232,0.25); line-height: 1.8; }
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem; font-weight: 900;
-      color: var(--gold-dim); margin-bottom: 10px; display: block;
-    }
-
-    /* ─── FLOATING WA BUTTON ────────────────────────────────────── */
-    .float-wa {
-      position: fixed; bottom: 22px; right: 22px; z-index: 200;
-      width: 58px; height: 58px; border-radius: 50%;
-      background: var(--wa);
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.5);
-      text-decoration: none;
-      animation: bounceIn 0.6s 1.5s cubic-bezier(.36,2,.5,1) both;
-      transition: transform 0.2s;
-    }
-    .float-wa:hover { transform: scale(1.1); }
-    .float-wa svg { width: 30px; height: 30px; color: #fff; }
-    .float-wa::before {
-      content: '';
-      position: absolute; inset: -4px; border-radius: 50%;
-      border: 2px solid rgba(37,211,102,0.35);
-      animation: ping 2s ease-in-out infinite;
-    }
-    @keyframes bounceIn {
-      from { opacity: 0; transform: scale(0); }
-      to   { opacity: 1; transform: scale(1); }
-    }
-    @keyframes ping {
-      0%   { transform: scale(1); opacity: 0.7; }
-      100% { transform: scale(1.6); opacity: 0; }
-    }
+    :root{--gold:#C9A84C;--gold-light:#E8C96A;--gold-dim:#8A6B28;--black:#080808;--dark:#0E0E0E;--dark2:#161616;--dark3:#1E1E1E;--white:#F5F0E8;--white-dim:rgba(245,240,232,0.55);--radius:14px;--wa:#25D366;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");opacity:0.025;}
+    section,header,footer{position:relative;z-index:1;}
+    .gold-line{display:block;width:60px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:18px;}
+    .bono-banner{background:linear-gradient(90deg,var(--gold-dim),var(--gold),var(--gold-dim));padding:10px 24px;text-align:center;font-size:0.82rem;font-weight:700;color:var(--black);letter-spacing:0.06em;text-transform:uppercase;position:relative;z-index:200;animation:pulseBar 2.5s ease-in-out infinite;}
+    @keyframes pulseBar{0%,100%{opacity:1}50%{opacity:0.85}}
+    nav{position:fixed;top:36px;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:linear-gradient(180deg,rgba(8,8,8,0.98) 0%,transparent 100%);backdrop-filter:blur(6px);}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:900;color:var(--gold-light);letter-spacing:0.04em;text-decoration:none;display:flex;align-items:center;gap:10px;}
+    .nav-cta{background:var(--gold);color:var(--black);font-weight:700;font-size:0.8rem;padding:9px 18px;border-radius:50px;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.2s,transform 0.15s;}
+    .nav-cta:hover{background:var(--gold-light);transform:translateY(-1px);}
+    .hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:150px 24px 80px;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,168,76,0.13) 0%,transparent 65%),radial-gradient(ellipse 50% 40% at 80% 80%,rgba(201,168,76,0.07) 0%,transparent 60%),var(--black);overflow:hidden;}
+    .bono-hero-badge{display:inline-flex;align-items:center;gap:16px;background:linear-gradient(135deg,rgba(201,168,76,0.18),rgba(201,168,76,0.06));border:1.5px solid rgba(201,168,76,0.5);border-radius:16px;padding:16px 28px;margin-bottom:32px;animation:fadeUp 0.6s ease both;box-shadow:0 0 40px rgba(201,168,76,0.12);}
+    .bono-hero-badge .bono-percent{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+    .bono-hero-badge .bono-text{display:flex;flex-direction:column;align-items:flex-start;gap:3px;}
+    .bono-hero-badge .bono-text .label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--white-dim);}
+    .bono-hero-badge .bono-text .value{font-size:1rem;font-weight:700;color:var(--gold-light);}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,168,76,0.35);border-radius:50px;padding:6px 16px;font-size:0.72rem;font-weight:500;color:var(--gold);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:28px;animation:fadeUp 0.7s 0.1s ease both;}
+    .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 1.8s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,9vw,5.2rem);font-weight:900;line-height:1.05;letter-spacing:-0.01em;margin-bottom:22px;animation:fadeUp 0.7s 0.15s ease both;}
+    .hero h1 .highlight{background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dim) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .hero-sub{font-size:clamp(1rem,3.5vw,1.2rem);font-weight:300;color:var(--white-dim);max-width:480px;line-height:1.65;margin-bottom:40px;animation:fadeUp 0.7s 0.2s ease both;}
+    .hero-cta-group{display:flex;flex-direction:column;align-items:center;gap:14px;animation:fadeUp 0.7s 0.3s ease both;}
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:var(--black);font-weight:700;font-size:1rem;letter-spacing:0.03em;padding:18px 36px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;box-shadow:0 0 40px rgba(201,168,76,0.3),0 4px 16px rgba(0,0,0,0.5);transition:transform 0.2s,box-shadow 0.2s;width:100%;max-width:380px;}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 60px rgba(201,168,76,0.45),0 8px 24px rgba(0,0,0,0.5);}
+    .btn-primary svg{width:22px;height:22px;flex-shrink:0;}
+    .urgency-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:50px;padding:8px 18px;font-size:0.75rem;color:var(--gold);letter-spacing:0.05em;}
+    .hero-trust{font-size:0.78rem;color:var(--white-dim);letter-spacing:0.04em;}
+    .orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px);opacity:0.18;}
+    .orb-1{width:340px;height:340px;background:var(--gold);top:-80px;left:-100px;animation:drift 14s ease-in-out infinite alternate;}
+    .orb-2{width:250px;height:250px;background:var(--gold-dim);bottom:0;right:-60px;animation:drift 18s ease-in-out infinite alternate-reverse;}
+    @keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(20px,30px) scale(1.1)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+    .proof-bar{background:var(--dark2);border-top:1px solid rgba(201,168,76,0.1);border-bottom:1px solid rgba(201,168,76,0.1);padding:20px 24px;text-align:center;}
+    .proof-bar p{font-size:0.72rem;color:var(--gold);text-transform:uppercase;letter-spacing:0.15em;font-weight:600;margin-bottom:16px;}
+    .proof-items{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:24px 36px;}
+    .proof-item{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--white-dim);font-weight:500;}
+    .proof-item svg{width:18px;height:18px;color:var(--gold);flex-shrink:0;}
+    .bono-section{padding:70px 24px;background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.02));border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);text-align:center;}
+    .bono-card{max-width:580px;margin:0 auto;background:rgba(201,168,76,0.06);border:1.5px solid rgba(201,168,76,0.3);border-radius:20px;padding:48px 36px;position:relative;overflow:hidden;}
+    .bono-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+    .bono-card .big-percent{font-family:'Playfair Display',serif;font-size:clamp(5rem,18vw,8rem);font-weight:900;line-height:1;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;}
+    .bono-card .bono-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:14px;color:var(--white);}
+    .bono-card .bono-desc{font-size:0.92rem;color:var(--white-dim);line-height:1.75;margin-bottom:30px;}
+    .bono-card .bono-example{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);border-radius:12px;padding:16px 24px;font-size:0.9rem;color:var(--gold-light);font-weight:600;margin-bottom:30px;}
+    .bono-card .bono-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:var(--black);font-weight:700;font-size:1rem;padding:17px 34px;border-radius:50px;text-decoration:none;box-shadow:0 0 40px rgba(201,168,76,0.35);transition:transform 0.2s,box-shadow 0.2s;width:100%;max-width:360px;justify-content:center;}
+    .bono-card .bono-cta:hover{transform:translateY(-2px);box-shadow:0 0 60px rgba(201,168,76,0.5);}
+    .bono-card .bono-note{margin-top:14px;font-size:0.72rem;color:var(--white-dim);}
+    .benefits{padding:80px 24px;background:var(--dark);}
+    .section-label{font-size:0.72rem;color:var(--gold);text-transform:uppercase;letter-spacing:0.18em;font-weight:600;margin-bottom:10px;}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,6vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:14px;}
+    .section-sub{font-size:0.95rem;color:var(--white-dim);line-height:1.7;max-width:420px;margin-bottom:48px;}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+    .card{background:var(--dark3);border:1px solid rgba(201,168,76,0.1);border-radius:var(--radius);padding:28px 24px;transition:border-color 0.25s,transform 0.25s;position:relative;overflow:hidden;}
+    .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity 0.3s;}
+    .card:hover{border-color:rgba(201,168,76,0.3);transform:translateY(-3px);}
+    .card:hover::before{opacity:1;}
+    .card-icon{width:46px;height:46px;border-radius:12px;background:rgba(201,168,76,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+    .card-icon svg{width:22px;height:22px;color:var(--gold);}
+    .card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:8px;}
+    .card p{font-size:0.87rem;color:var(--white-dim);line-height:1.65;}
+    .how{padding:80px 24px;background:var(--black);}
+    .steps{display:flex;flex-direction:column;gap:0;margin-top:48px;}
+    .step{display:flex;gap:20px;align-items:flex-start;padding-bottom:36px;position:relative;}
+    .step:not(:last-child)::before{content:'';position:absolute;left:19px;top:46px;width:2px;bottom:0;background:linear-gradient(180deg,rgba(201,168,76,0.4),transparent);}
+    .step-num{width:40px;height:40px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:var(--black);font-weight:800;font-size:0.85rem;display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(201,168,76,0.25);}
+    .step-body h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:6px;margin-top:8px;}
+    .step-body p{font-size:0.87rem;color:var(--white-dim);line-height:1.65;}
+    .stats{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.04));border-top:1px solid rgba(201,168,76,0.15);border-bottom:1px solid rgba(201,168,76,0.15);padding:48px 24px;}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:32px;text-align:center;}
+    .stat-value{font-family:'Playfair Display',serif;font-size:clamp(2rem,7vw,3rem);font-weight:900;color:var(--gold-light);line-height:1;}
+    .stat-label{font-size:0.78rem;color:var(--white-dim);text-transform:uppercase;letter-spacing:0.1em;margin-top:6px;}
+    .cta-section{padding:90px 24px;background:radial-gradient(ellipse 70% 50% at 50% 100%,rgba(201,168,76,0.12) 0%,transparent 70%),var(--dark);text-align:center;}
+    .cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,7vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:18px;}
+    .cta-section p{font-size:0.95rem;color:var(--white-dim);line-height:1.7;max-width:380px;margin:0 auto 36px;}
+    .btn-wa{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--wa);color:#fff;font-weight:700;font-size:1rem;letter-spacing:0.02em;padding:18px 36px;border-radius:50px;text-decoration:none;box-shadow:0 0 40px rgba(37,211,102,0.3),0 4px 20px rgba(0,0,0,0.4);transition:transform 0.2s,box-shadow 0.2s;width:100%;max-width:380px;}
+    .btn-wa:hover{transform:translateY(-2px);box-shadow:0 0 60px rgba(37,211,102,0.45),0 8px 24px rgba(0,0,0,0.4);}
+    .btn-wa svg{width:24px;height:24px;flex-shrink:0;}
+    .cta-note{margin-top:18px;font-size:0.75rem;color:var(--white-dim);}
+    footer{background:var(--black);border-top:1px solid rgba(255,255,255,0.05);padding:28px 24px;text-align:center;}
+    footer p{font-size:0.72rem;color:rgba(245,240,232,0.25);line-height:1.8;}
+    .footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--gold-dim);margin-bottom:10px;display:block;}
+    .float-wa{position:fixed;bottom:22px;right:22px;z-index:200;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);text-decoration:none;animation:bounceIn 0.6s 1.5s cubic-bezier(.36,2,.5,1) both;transition:transform 0.2s;}
+    .float-wa:hover{transform:scale(1.1);}
+    .float-wa svg{width:30px;height:30px;color:#fff;}
+    .float-wa::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(37,211,102,0.35);animation:ping 2s ease-in-out infinite;}
+    @keyframes bounceIn{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+    @keyframes ping{0%{transform:scale(1);opacity:0.7}100%{transform:scale(1.6);opacity:0}}
   </style>
 </head>
 <body>
 
-<!-- ─── BONO TOP BANNER ───────────────────────────────────────── -->
-<div class="bono-banner">
-  🎁 BONO DEL 100% EN TU PRIMERA CARGA · SOLO POR HOY · PLAZAS LIMITADAS 🎁
-</div>
+<div class="bono-banner">🎁 BONO DEL 100% EN TU PRIMERA CARGA · SOLO POR HOY · PLAZAS LIMITADAS 🎁</div>
 
-<!-- ─── NAV ───────────────────────────────────────────────────── -->
 <nav>
   <a class="nav-logo" href="#">Tango 01</a>
-  <a class="nav-cta wa-btn" href="#">🎁 Activar bono 100%</a>
+  <a class="nav-cta" href="https://wa.me/5492236749375?text=Hola!%20Vi%20que%20hay%20un%20bono%20del%20100%25%20en%20la%20primera%20carga%20en%20Tango%2001.%20Quiero%20activarlo%20%F0%9F%8E%81">🎁 Activar bono 100%</a>
 </nav>
 
-<!-- ─── HERO ──────────────────────────────────────────────────── -->
 <header class="hero" id="inicio">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
-
   <div class="bono-hero-badge">
     <div class="bono-percent">100%</div>
     <div class="bono-text">
@@ -543,23 +137,11 @@ src="https://www.facebook.com/tr?id=1525657955581825&ev=PageView&noscript=1"
       <span class="value">En tu primera carga</span>
     </div>
   </div>
-
   <div class="hero-badge">Tango 01 · Plataforma Premium</div>
-
-  <h1>
-    La experiencia<br/>
-    premium que<br/>
-    <span class="highlight">te da más</span>
-  </h1>
-
-  <p class="hero-sub">
-    <strong style="color:var(--gold-light);">Activá tu bono del 100% hoy.</strong><br/>
-    Mañana puede no estar disponible.<br/>
-    Solo para los que llegan ahora.
-  </p>
-
+  <h1>La experiencia<br/>premium que<br/><span class="highlight">te da más</span></h1>
+  <p class="hero-sub"><strong style="color:var(--gold-light);">Activá tu bono del 100% hoy.</strong><br/>Mañana puede no estar disponible.<br/>Solo para los que llegan ahora.</p>
   <div class="hero-cta-group">
-    <a class="btn-primary wa-btn" href="#">
+    <a class="btn-primary" href="https://wa.me/5492236749375?text=Hola!%20Vi%20que%20hay%20un%20bono%20del%20100%25%20en%20la%20primera%20carga%20en%20Tango%2001.%20Quiero%20activarlo%20%F0%9F%8E%81">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.524 5.836L.057 23.625a.5.5 0 0 0 .619.619l5.79-1.468A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.892 9.892 0 0 1-5.036-1.376l-.361-.214-3.735.948.993-3.62-.236-.374A9.867 9.867 0 0 1 2.1 12C2.1 6.534 6.534 2.1 12 2.1c5.465 0 9.9 4.434 9.9 9.9 0 5.465-4.435 9.9-9.9 9.9z"/></svg>
       🎁 Quiero mi bono del 100% ahora
     </a>
@@ -568,42 +150,23 @@ src="https://www.facebook.com/tr?id=1525657955581825&ev=PageView&noscript=1"
   </div>
 </header>
 
-<!-- ─── PROOF BAR ──────────────────────────────────────────────── -->
 <div class="proof-bar">
   <p>🔥 Pagos procesados hoy en toda Argentina</p>
   <div class="proof-items">
-    <div class="proof-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-      Pagos garantizados
-    </div>
-    <div class="proof-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Plataforma segura
-    </div>
-    <div class="proof-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      Atención 24hs
-    </div>
-    <div class="proof-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      Miles de usuarios activos
-    </div>
+    <div class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Pagos garantizados</div>
+    <div class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Plataforma segura</div>
+    <div class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Atención 24hs</div>
+    <div class="proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Miles de usuarios activos</div>
   </div>
 </div>
 
-<!-- ─── BONO SECTION ──────────────────────────────────────────── -->
 <section class="bono-section" id="bono">
   <div class="bono-card">
     <div class="big-percent">100%</div>
     <div class="bono-title">Bono de Bienvenida Exclusivo</div>
-    <p class="bono-desc">
-      Hacés tu primera carga en Tango 01 y te acreditamos el <strong style="color:var(--gold-light);">100% extra automáticamente</strong>.<br/>
-      Sin vueltas, sin letra chica, sin esperas.
-    </p>
-    <div class="bono-example">
-      💰 Cargás $10.000 → Jugás con $20.000
-    </div>
-    <a class="bono-cta wa-btn" href="#">
+    <p class="bono-desc">Hacés tu primera carga en Tango 01 y te acreditamos el <strong style="color:var(--gold-light);">100% extra automáticamente</strong>.<br/>Sin vueltas, sin letra chica, sin esperas.</p>
+    <div class="bono-example">💰 Cargás $10.000 → Jugás con $20.000</div>
+    <a class="bono-cta" href="https://wa.me/5492236749375?text=Hola!%20Vi%20que%20hay%20un%20bono%20del%20100%25%20en%20la%20primera%20carga%20en%20Tango%2001.%20Quiero%20activarlo%20%F0%9F%8E%81">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.524 5.836L.057 23.625a.5.5 0 0 0 .619.619l5.79-1.468A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.892 9.892 0 0 1-5.036-1.376l-.361-.214-3.735.948.993-3.62-.236-.374A9.867 9.867 0 0 1 2.1 12C2.1 6.534 6.534 2.1 12 2.1c5.465 0 9.9 4.434 9.9 9.9 0 5.465-4.435 9.9-9.9 9.9z"/></svg>
       🎁 Activar mi bono ahora
     </a>
@@ -611,159 +174,67 @@ src="https://www.facebook.com/tr?id=1525657955581825&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ─── BENEFITS ──────────────────────────────────────────────── -->
 <section class="benefits" id="beneficios">
   <span class="gold-line"></span>
   <div class="section-label">Por qué elegirnos</div>
   <h2 class="section-title">Por qué acá<br/>la gente <span style="background:linear-gradient(135deg,#E8C96A,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">gana de verdad</span></h2>
-  <p class="section-sub">
-    Sin límites, sin demoras, sin excusas.<br/>
-    Cuando ganás, <strong style="color:var(--gold-light);">cobrás. Así de simple.</strong>
-  </p>
+  <p class="section-sub">Sin límites, sin demoras, sin excusas.<br/>Cuando ganás, <strong style="color:var(--gold-light);">cobrás. Así de simple.</strong></p>
   <div class="cards">
-    <div class="card">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-      </div>
-      <h3>Cobrás sin límite</h3>
-      <p>Ganaste, cobrás. Sin topes, sin demoras, sin excusas. Tu plata está disponible cuando vos querés.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      </div>
-      <h3>Siempre hay alguien para vos</h3>
-      <p>Las 3AM o las 3PM, no importa. Siempre hay un humano real del otro lado listo para ayudarte a cargar y jugar.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3>Jugás con total tranquilidad</h3>
-      <p>Plataforma verificada, estable y rápida. Nada de caídas justo cuando más necesitás. Solo vos y el juego.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      </div>
-      <h3>En minutos ya estás jugando</h3>
-      <p>Escribís por WhatsApp, te damos acceso, cargás y listo. Sin formularios, sin esperas. <strong style="color:var(--gold-light);">Más rápido imposible.</strong></p>
-    </div>
-    <div class="card">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      </div>
-      <h3>Jugás desde donde estés</h3>
-      <p>En el colectivo, en casa, en el trabajo. Con el celu alcanza. Sin descargar nada. Solo abrís y jugás.</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      </div>
-      <h3>Miles ya están adentro</h3>
-      <p>Mientras vos leés esto, hay gente ganando en Tango 01. ¿Vas a quedarte afuera? <strong style="color:var(--gold-light);">Entrá ahora.</strong></p>
-    </div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><h3>Cobrás sin límite</h3><p>Ganaste, cobrás. Sin topes, sin demoras, sin excusas. Tu plata está disponible cuando vos querés.</p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Siempre hay alguien para vos</h3><p>Las 3AM o las 3PM, no importa. Siempre hay un humano real del otro lado listo para ayudarte.</p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Jugás con total tranquilidad</h3><p>Plataforma verificada, estable y rápida. Nada de caídas justo cuando más necesitás.</p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>En minutos ya estás jugando</h3><p>Escribís por WhatsApp, te damos acceso, cargás y listo. Sin formularios, sin esperas.</p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Jugás desde donde estés</h3><p>En el colectivo, en casa, en el trabajo. Con el celu alcanza. Sin descargar nada.</p></div>
+    <div class="card"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h3>Miles ya están adentro</h3><p>Mientras vos leés esto, hay gente ganando en Tango 01. ¿Vas a quedarte afuera?</p></div>
   </div>
 </section>
 
-<!-- ─── STATS ──────────────────────────────────────────────────── -->
 <section class="stats">
   <div class="stats-grid">
-    <div>
-      <div class="stat-value">100%</div>
-      <div class="stat-label">Bono primera carga</div>
-    </div>
-    <div>
-      <div class="stat-value">24hs</div>
-      <div class="stat-label">Atención disponible</div>
-    </div>
-    <div>
-      <div class="stat-value">∞</div>
-      <div class="stat-label">Pagos sin límite</div>
-    </div>
-    <div>
-      <div class="stat-value">ARG</div>
-      <div class="stat-label">Todo el país</div>
-    </div>
+    <div><div class="stat-value">100%</div><div class="stat-label">Bono primera carga</div></div>
+    <div><div class="stat-value">24hs</div><div class="stat-label">Atención disponible</div></div>
+    <div><div class="stat-value">∞</div><div class="stat-label">Pagos sin límite</div></div>
+    <div><div class="stat-value">ARG</div><div class="stat-label">Todo el país</div></div>
   </div>
 </section>
 
-<!-- ─── HOW IT WORKS ──────────────────────────────────────────── -->
 <section class="how" id="como-funciona">
   <span class="gold-line"></span>
   <div class="section-label">El proceso</div>
   <h2 class="section-title">Activá tu bono<br/>en <span style="background:linear-gradient(135deg,#E8C96A,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">menos de 5 minutos</span></h2>
   <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-body">
-        <h3>Escribinos y pedí tu bono</h3>
-        <p>Un clic y abrís WhatsApp directo con nuestro equipo. Respondemos <strong style="color:var(--gold-light);">al instante</strong>, no hay bots. Mencioná el bono del 100% y te lo activamos de inmediato.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-body">
-        <h3>Hacés tu primera carga</h3>
-        <p>Te explicamos cómo cargar y te acompañamos en todo el proceso. Rápido, seguro y sin complicaciones.</p>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-body">
-        <h3>Recibís el 100% extra y empezás</h3>
-        <p>Tu bono se acredita automáticamente. <strong style="color:var(--gold-light);">Empezás a jugar con el doble de saldo</strong> desde el primer momento. Cuando ganás, cobrás sin límite.</p>
-      </div>
-    </div>
+    <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Escribinos y pedí tu bono</h3><p>Un clic y abrís WhatsApp directo con nuestro equipo. Respondemos <strong style="color:var(--gold-light);">al instante</strong>, no hay bots.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Hacés tu primera carga</h3><p>Te explicamos cómo cargar y te acompañamos en todo el proceso. Rápido, seguro y sin complicaciones.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Recibís el 100% extra y empezás</h3><p>Tu bono se acredita automáticamente. <strong style="color:var(--gold-light);">Empezás a jugar con el doble de saldo</strong> desde el primer momento.</p></div></div>
   </div>
 </section>
 
-<!-- ─── FINAL CTA ─────────────────────────────────────────────── -->
 <section class="cta-section" id="cta">
-  <span class="gold-line" style="margin: 0 auto 18px;"></span>
+  <span class="gold-line" style="margin:0 auto 18px;"></span>
   <h2>¿Seguís dejando<br/>pasar tu <span style="background:linear-gradient(135deg,#E8C96A,#C9A84C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">bono del 100%?</span></h2>
-  <p>
-    Cada hora que esperás es plata que perdés.<br/>
-    <strong style="color:var(--gold-light);">Activá tu bono hoy y empezá a jugar ahora mismo.</strong>
-  </p>
-  <a class="btn-wa wa-btn" href="#">
+  <p>Cada hora que esperás es plata que perdés.<br/><strong style="color:var(--gold-light);">Activá tu bono hoy y empezá a jugar ahora mismo.</strong></p>
+  <a class="btn-wa" href="https://wa.me/5492236749375?text=Hola!%20Vi%20que%20hay%20un%20bono%20del%20100%25%20en%20la%20primera%20carga%20en%20Tango%2001.%20Quiero%20activarlo%20%F0%9F%8E%81">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.524 5.836L.057 23.625a.5.5 0 0 0 .619.619l5.79-1.468A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.892 9.892 0 0 1-5.036-1.376l-.361-.214-3.735.948.993-3.62-.236-.374A9.867 9.867 0 0 1 2.1 12C2.1 6.534 6.534 2.1 12 2.1c5.465 0 9.9 4.434 9.9 9.9 0 5.465-4.435 9.9-9.9 9.9z"/></svg>
     🎁 Activar mi bono del 100% ahora
   </a>
   <p class="cta-note">🔥 Hay gente jugando ahora mismo · Respondemos al instante</p>
 </section>
 
-<!-- ─── FOOTER ─────────────────────────────────────────────────── -->
 <footer>
   <span class="footer-logo">Tango 01</span>
-  <p>
-    © 2025 Tango 01 · Plataforma de entretenimiento premium.<br/>
-    Solo para mayores de 18 años. Jugá con responsabilidad.
-  </p>
+  <p>© 2025 Tango 01 · Plataforma de entretenimiento premium.<br/>Solo para mayores de 18 años. Jugá con responsabilidad.</p>
 </footer>
 
-<!-- ─── FLOATING WA BUTTON ─────────────────────────────────────── -->
-<a class="float-wa wa-btn" href="#" title="WhatsApp">
+<a class="float-wa" href="https://wa.me/5492236749375?text=Hola!%20Vi%20que%20hay%20un%20bono%20del%20100%25%20en%20la%20primera%20carga%20en%20Tango%2001.%20Quiero%20activarlo%20%F0%9F%8E%81" title="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.524 5.836L.057 23.625a.5.5 0 0 0 .619.619l5.79-1.468A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.892 9.892 0 0 1-5.036-1.376l-.361-.214-3.735.948.993-3.62-.236-.374A9.867 9.867 0 0 1 2.1 12C2.1 6.534 6.534 2.1 12 2.1c5.465 0 9.9 4.434 9.9 9.9 0 5.465-4.435 9.9-9.9 9.9z"/></svg>
 </a>
 
-<!-- ─── SCRIPT: WhatsApp + Pixel Tracking ─────────────────────── -->
-<!-- ─── SCRIPT: WhatsApp + Pixel Tracking ─────────────────────── -->
 <script>
-  const WA_NUMBER  = "5492236749375";
-  const WA_MESSAGE = "Hola! Vi que hay un bono del 100% en la primera carga en Tango 01. Quiero activarlo 🎁";
-
-  const waURL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`;
-
-  document.querySelectorAll(".wa-btn").forEach(el => {
-    el.href = waURL;
-    el.addEventListener('click', function() {
-      fbq('trackCustom', 'clickwhatsapp');
-      console.log('✅ Pixel: clickwhatsapp disparado');
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      fbq('trackCustom', 'ClickWhatsApp');
     });
   });
-
-  // ❌ ELIMINADO: fbq('track', 'ViewContent', {...}) → generaba "Ver contenido"
 </script>
 
 </body>
